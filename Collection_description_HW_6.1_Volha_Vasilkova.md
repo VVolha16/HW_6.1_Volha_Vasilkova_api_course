@@ -1,4 +1,4 @@
-#Create a task Home Work 6.1 Volha Vasilkova
+# Sql Verifier: Task Creation
 
 This API allows you to create a task
 
@@ -6,14 +6,11 @@ The API is available at `http://localhost:8080`
 
 ## Endpoints 
 
-- [API Authentication](#API Authentication)
-- [Create a task](#Create a task)
-
 ### API Authentication
 
 **POST `/api/authenticate`**
 
-To create a task, you need to register your API client with admin:
+To create a task, you need to register your API client with admin credentials:
 
 |username |password  |
 |---------|----------|
@@ -91,7 +88,7 @@ Authorization: Bearer <ADMIN ID TOKEN>
  
 | Status code                        | Description                                                                                                             |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| 201 Created                        | Indicates that the item has been added successfully                                                                     |
+| 201 Created                        | Indicates that the item has been created successfully                                                                   |
 | 400 Bad Request                    | Indicates that the parameters provided are invalid or missing                                                           |
 | 401 Unauthorized                   | Indicates that the request has not been authenticated. Try checking `Bearer <ADMIN ID TOKEN>` in `Authorization` header |
 | 500 Created Internal Service Error | Indicates that there is an Internal Service Error                                                                       |

@@ -1,0 +1,87 @@
+{
+	"id": "eec6be21-e15a-400d-a88d-d91eb18d8905",
+	"name": "8080 HW 5.2",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "id_token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "happy_value",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "text",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "answer",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "title",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "sadPathText",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "sadPathAnswer",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "sadPathTitle",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "sad_value",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "default_string",
+			"value": "string",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "response_code",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "response_message",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-05-07T18:53:25.666Z",
+	"_postman_exported_using": "Postman/11.0.7"
+}

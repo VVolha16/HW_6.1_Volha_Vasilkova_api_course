@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "4c95aa11-03f3-454d-943f-6a135a3be6f0",
+		"name": "HW 6.1_collectiong_Volha_Vasilkova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25901141-4c95aa11-03f3-454d-943f-6a135a3be6f0"
+	},
+	"item": [
+		{
+			"name": "ADMIN login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonBody = pm.response.json();\r",
+							"pm.environment.set(\"id_token\", jsonBody.id_token);\r",
+							"\r",
+							"//TESTS\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"// чек, что токен возвращается при логине как админ\r",
+							"pm.test(\"Check that id_token is present in the response and not empty, underfined or null\", function () {\r",
+							"    // Проверяем, что свойство 'id_token' существует\r",
+							"    pm.expect(jsonBody).to.have.property('id_token');\r",
+							"    // Проверяем, что значение свойства 'token' не является undefined, null или пустой строкой\r",
+							"    pm.expect(jsonBody.id_token).to.not.be.undefined;\r",
+							"    pm.expect(jsonBody.id_token).to.not.be.null;\r",
+							"    pm.expect(jsonBody.id_token).to.not.eql('');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "35bcf826-f0c2-43e4-af44-4cadd97ab748"
+					}
+				}
+			],
+			"id": "62b3f26a-8937-4bcd-909b-9f43cba5b3de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.5"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8080/login"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8080"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\",\r\n\"password\":\"admin\",\r\n\"rememberMe\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/authenticate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Happy Path",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//TESTS\r",
+							"pm.test(\"Status code is 201, New Task is created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is \\\"CREATED\\\" as expected\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"id": "2464b21d-951a-48d8-8dfe-cb24a0c985b9"
+					}
+				}
+			],
+			"id": "9e13a332-a7d1-411d-bcaa-9f2c53912b28",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"{{text}}\",\r\n  \"answer\": \"{{answer}}\",\r\n  \"title\": \"{{title}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sad Path Text",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "feb6f786-a416-4e00-acc0-0c8189961d09",
+						"exec": [
+							"let responseData = pm.response.json();\r",
+							"\r",
+							"//TESTS\r",
+							"pm.test(\"Status code is 500 Bad Request\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"When register with blank field text => response body includes property \\\"status\\\": 500\", function () {\r",
+							"        pm.expect(responseData.status).to.equal(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1aefe4e4-2a7f-4062-b08d-2d3dda97789e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "46f8cc5f-2e2d-40bf-9615-9bac6dc5ffea",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcxNDU5NDUzOSwiYXV0aCI6IlJPTEVfQURNSU4iLCJpYXQiOjE3MTQ1MDgxMzl9.EeDG-a5Z3bVxjA1-le5QckW2YoOvYcSg52ffDgDEvfXC0PH619uRw8QXx1e4Ooye79LY7Yn_yKfBGz7CcYLU2A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"{{sadPathText}}\",\r\n  \"answer\": \"{{answer}}\",\r\n  \"title\": \"{{title}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/tasks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{id_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "d2b39a87-dd11-4f70-9e94-f13f50c8b1a2"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "041ef18b-682a-435d-8a7f-eec1b2a5f79c"
+			}
+		}
+	]
+}

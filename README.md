@@ -12,11 +12,12 @@ Otherwise you won't be able to connect GitHub from Postman.
 ```
 3. Create a new API, name it
 ```
-   Note: for free Postman version there is possibility to have only one connected repository.
-   If you have previously created API - you need to delete it or disconnect repository
-   To disconnect repository:
-- click on created API
-- click on `Source control` icon on the right sidebar
-- click on three dots
-- click on `Disconnect repository` - the collection will be deleted from previously created API
+   Note: for free Postman version there is possibility to have only ONE connected repository.
+   If you have previously created API - you need to delete it or disconnect* repository
+      *To disconnect repository:
+      - click on created API
+      - click on `Source control` icon on the right sidebar
+      - click on three dots
+      - click on `Disconnect repository` - the collection will be deleted from previously created API
 ```
+

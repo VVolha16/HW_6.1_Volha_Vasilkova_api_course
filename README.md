@@ -1,9 +1,9 @@
 # How to start working with the collection in Postman for API testing purpose  
 
+## 1. Postman
+
 To begin using the code from github you need to create `Team Workspace` for your Postman account (if not created): [Create a new workspace in Postman](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/creating-workspaces/#create-a-new-workspace).
 Otherwise you won't be able to connect GitHub from Postman.
-
-## 1. Postman
 
 1. Log in to Postman
 2. On the left sidebar click on `APIs` icon
@@ -20,4 +20,19 @@ Otherwise you won't be able to connect GitHub from Postman.
       - click on three dots
       - click on `Disconnect repository` - the collection will be deleted from previously created API
 ```
+4. Being logged in GitHub on the main screen of Postman find "Connect repository" > select Connect > GitHub
+5. Click on "Continue" on notifying page 
+
+   ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/9c3823f2-5e59-458d-bee8-9a6ae873d2f2)
+
+    You're authorized message will be displayed:
+
+   ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/0210420a-9273-4f7d-a708-0dd705fa80e6)
+
+   6. Fill in the fields about repository you want to connet and click on "Connect" button
+      ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/27b97754-01e3-40d8-8a3c-9b866d7d9426)
+
+      Now the 
+
+
 

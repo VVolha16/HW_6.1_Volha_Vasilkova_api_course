@@ -28,11 +28,25 @@ Otherwise you won't be able to connect GitHub from Postman.
     You're authorized message will be displayed:
 
    ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/0210420a-9273-4f7d-a708-0dd705fa80e6)
-
-   6. Fill in the fields about repository you want to connet and click on "Connect" button
+ 6. Fill in the fields about repository you want to connet and click on "Connect" button
       ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/27b97754-01e3-40d8-8a3c-9b866d7d9426)
 
-      Now the 
+      Now the Postman is synchronized with the GitHub and necessary collection should be displayed in Postman
+
+ ## 2. Data
+ 
+Please upload the following files to start work with collection
+- Environment file : 
+- Data csv. file :
+
+Check in browser:
+ - application: http://localhost:8080/task?page=0&sort=id,asc
+ - openAPI definition: http://localhost:8080/docs/docs
+
+  ## 3. Description of collection
+
+  To start wotk with the collection make sure that all necessary tools are successfully installed
+  Please see the detailed instructions here: https://github.com/IT-switcher/verifier/blob/main/README.md
 
 
 

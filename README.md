@@ -48,5 +48,7 @@ Check in browser:
   To start wotk with the collection make sure that all necessary tools are successfully installed
   Please see the detailed instructions here: https://github.com/IT-switcher/verifier/blob/main/README.md
 
+  Detailed collection description please see in the following [instruction](https://github.com/VVolha16/HW_6.1_api_TEST/blob/main/Collection_description_HW_6.1_Volha_Vasilkova.md)
+
 
 

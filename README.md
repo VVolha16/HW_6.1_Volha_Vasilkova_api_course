@@ -1,10 +1,11 @@
 # How to start working with the collection in Postman for API testing purpose  
 
-## 1. Postman
+## Postman
 
 To begin using the code from github you need to create `Team Workspace` for your Postman account (if not created): [Create a new workspace in Postman](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/creating-workspaces/#create-a-new-workspace).
 Otherwise you won't be able to connect GitHub from Postman.
 
+Then follow the steps in Postman:
 1. Log in to Postman
 2. On the left sidebar click on `APIs` icon
 ```
@@ -28,27 +29,38 @@ Otherwise you won't be able to connect GitHub from Postman.
     You're authorized message will be displayed:
 
    ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/0210420a-9273-4f7d-a708-0dd705fa80e6)
+   
  6. Fill in the fields about repository you want to connet and click on "Connect" button
+    
       ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/27b97754-01e3-40d8-8a3c-9b866d7d9426)
 
       Now the Postman is synchronized with the GitHub and necessary collection should be displayed in Postman
 
- ## 2. Data
  
-Please upload the following files to start work with collection
-- Environment file : 
-- Data csv. file :
+  ## Sql Verifier collection description
 
-Check in browser:
- - application: http://localhost:8080/task?page=0&sort=id,asc
- - openAPI definition: http://localhost:8080/docs/docs
+  To start wotk with the collection make sure that all necessary tools are successfully installed.  Please see the detailed instructions here: https://github.com/IT-switcher/verifier/blob/main/README.md
 
-  ## 3. Description of collection
+  Before testing please read attentively "Sql Verifier" collection documentation [here](https://github.com/VVolha16/HW_6.1_api_TEST/blob/main/Collection_description_HW_6.1_Volha_Vasilkova.md)
 
-  To start wotk with the collection make sure that all necessary tools are successfully installed
-  Please see the detailed instructions here: https://github.com/IT-switcher/verifier/blob/main/README.md
+  The API is available at http://localhost:8080,
+  openAPI definition: http://localhost:8080/docs/docs
+  
+  For testing purpose there are Happy Path (HP) and Sad Path (SP) requests in the collection. 
+  Sad path requests are used for error handling tesing.
 
-  Detailed collection description please see in the following [instruction](https://github.com/VVolha16/HW_6.1_api_TEST/blob/main/Collection_description_HW_6.1_Volha_Vasilkova.md)
+Happy Path requests:
+  - HP: create a task with valid values
+  - HP: create a task with long title
+
+Sad Path requests:
+  - SP: error when create a task with long text
+  - SP: error when create a task with long answer
+
+Please use the environment file or Data csv. file for necessary variables values.
+
+Collection is ready for API testing
+
 
 
 

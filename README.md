@@ -11,7 +11,7 @@ Then follow the steps in Postman:
 ```
    Note: if there is no 'APIs' icon - click on the last icon `Configure workspase sidebar` and turn on `APIs` element toggle
 ```
-3. Create a new API (click on "+" Create New API), name it 
+3. Create a new API (click on "+" Create New API or click on link "Create an API"), name it 
 ```
    Note: for free Postman version there is possibility to have only ONE connected repository.
    If you have previously created API - you need to delete it or disconnect* repository

@@ -21,8 +21,13 @@ Then follow the steps in Postman:
       - click on three dots
       - click on `Disconnect repository` - the collection will be deleted from previously created API
 ```
-4. Being logged in GitHub on the main screen of Postman find "Connect repository" > select Connect > GitHub
-5. Click on "Continue" on notifying page 
+4. Being logged in GitHub on the main screen of Postman click on "GitHub"
+
+   ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/12a52781-9b1d-4a41-aa71-23fe4a32ec4d)
+
+   Note: if you are going to connect to GitHub with existing API - select it and then click on "Connect repository" > select Connect 
+
+6. Click on "Continue" on notifying page 
 
    ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/9c3823f2-5e59-458d-bee8-9a6ae873d2f2)
 
@@ -30,7 +35,7 @@ Then follow the steps in Postman:
 
    ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/0210420a-9273-4f7d-a708-0dd705fa80e6)
    
- 6. Fill in the fields about repository you want to connet and click on "Connect" button
+ 7. Fill in the fields about repository you want to connet and click on "Connect" button
     
       ![image](https://github.com/VVolha16/HW_6.1_api_TEST/assets/166701053/27b97754-01e3-40d8-8a3c-9b866d7d9426)
 
